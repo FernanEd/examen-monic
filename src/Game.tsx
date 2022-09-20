@@ -1,5 +1,6 @@
 import * as React from 'react';
 import qB from './utils/questionBank';
+//@ts-ignore
 import anime from 'animejs';
 
 interface GameProps {

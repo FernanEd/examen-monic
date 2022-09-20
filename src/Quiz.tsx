@@ -1,5 +1,6 @@
 import * as React from 'react';
 import qB from './utils/questionBank';
+//@ts-ignore
 import anime from 'animejs';
 
 interface QuizProps {
@@ -10,6 +11,7 @@ interface QuizProps {
 const Quiz: React.FC<QuizProps> = ({ markAsCorrect, showQuizResults }) => {
 	const [currentQuestion, setCurrentQuestion] = React.useState(1);
 	const [showAnswer, setShowAnswer] = React.useState(false);
+	//@ts-ignore
 	const { question, options, answer } = qB[currentQuestion];
 	const [mounted, setMounted] = React.useState(true);
 
@@ -67,7 +69,7 @@ const Quiz: React.FC<QuizProps> = ({ markAsCorrect, showQuizResults }) => {
 			<p className="text-lg">{question}</p>
 
 			<div className="flex flex-col gap-4">
-				{options.map((option, i) => (
+				{options.map((option: string, i: number) => (
 					<button
 						className="btn"
 						onClick={(e) => {

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Game from './Game';
+//@ts-ignore
 import anime from 'animejs';
 import Quiz from './Quiz';
 

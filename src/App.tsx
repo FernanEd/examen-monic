@@ -55,6 +55,11 @@ const App: React.FC<AppProps> = () => {
 					<button className="btn btn-accent" onClick={() => startQuiz()}>
 						Comenzar examen
 					</button>
+
+					<img
+						src="https://i.pinimg.com/originals/5f/6f/0c/5f6f0cc5877d1076d3eccdc4b0d5964d.gif"
+						alt=""
+					/>
 				</div>
 			) : screen == 1 ? (
 				<Game

@@ -101,6 +101,7 @@ const App: React.FC<AppProps> = () => {
 						<div
 							className="radial-progress text-primary bg-gray-200"
 							style={{
+								//@ts-ignore
 								'--value': Math.round((correctAnswers / 40) * 100),
 							}}>
 							{correctAnswers}/40

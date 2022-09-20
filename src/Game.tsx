@@ -20,6 +20,7 @@ const Game: React.FC<GameProps> = ({
 	const [lives, setLives] = React.useState(numberOfLifes);
 
 	const [showAnswer, setShowAnswer] = React.useState(false);
+	//@ts-ignore
 	const { question, options, answer } = qB[currentQuestion];
 	const [mounted, setMounted] = React.useState(true);
 
@@ -102,7 +103,7 @@ const Game: React.FC<GameProps> = ({
 
 			{mounted && (
 				<div className="flex flex-col gap-4">
-					{options.map((option, i) => (
+					{options.map((option: string, i: number) => (
 						<button
 							className={`btn option ${
 								i + 1 == answer ? 'option-correct' : null
